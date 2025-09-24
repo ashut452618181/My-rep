@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upcoming Bollywood Movies – Sept 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    .filter {
+      margin-bottom: 20px;
+    }
+    .movie {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .movie h3 {
+      margin: 0;
+      color: #2980b9;
+    }
+    .movie p {
+      margin: 5px 0;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #eee;
+      color: #555;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Bollywood Movies – September 2025</h1>
+    <p>Stay updated with the latest theatrical and OTT releases</p>
+  </header>
+
+  <div class="container">
+    <div class="filter">
+      <label for="typeFilter">Filter by release type:</label>
+      <select id="typeFilter" onchange="filterMovies()">
+        <option value="all">All</option>
+        <option value="theatre">Theatre</option>
+        <option value="ott">OTT</option>
+      </select>
+    </div>
+
+    <div id="movieList"></div>
+  </div>
+
+  <script>
+    const movies = [
+      {
+        title: "Jugnuma – The Fable",
+        date: "12 Sept",
+        type: "theatre",
+        description: "A 1989-set mystery with Manoj Bajpayee involving burnt trees, family secrets, and suspense."
+      },
+      {
+        title: "Ek Chatur Naar",
+        date: "12 Sept",
+        type: "theatre",
+        description: "Divya Khosla Kumar stars in a dark comedy about cunning ambition and mind games."
+      },
+      {
+        title: "Saiyaara",
+        date: "12 Sept",
+        type: "ott",
+        description: "A romantic drama on Netflix about love, music, and early-onset Alzheimer’s."
+      },
+      {
+        title: "Tanvi the Great",
+        date: "12 Sept",
+        type: "ott",
+        description: "An inspiring Netflix story of an autistic woman’s dream to salute the flag at Siachen."
+      },
+      {
+        title: "Ajey: The Untold Story Of A Yogi",
+        date: "19 Sept",
+        type: "theatre",
+        description: "Biopic of Yogi Adityanath starring Anant Joshi, exploring faith and leadership."
+      },
+      {
+        title: "Jolly LLB 3",
+        date: "19 Sept",
+        type: "theatre",
+        description: "Akshay Kumar vs Arshad Warsi in a courtroom comedy showdown."
+      },
+      {
+        title: "Dhadak 2",
+        date: "26 Sept",
+        type: "ott",
+        description: "Netflix sequel exploring love across class divides and rebellion against injustice."
+      }
+    ];
+
+    function filterMovies() {
+      const type = document.getElementById("typeFilter").value;
+      const list = document.getElementById("movieList");
+      list.innerHTML = "";
+
+      const filtered = type === "all" ? movies : movies.filter(m => m.type === type);
+
+      filtered.forEach(movie => {
+        const div = document.createElement("div");
+        div.className = "movie";
+        div.innerHTML = `
+          <h3>${movie.title}</h3>
+          <p><strong>Release Date:</strong> ${movie.date}</p>
+          <p><span class="tag">${movie.type.toUpperCase()}</span></p>
+          <p>${movie.description}</p>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    filterMovies();
+  </script>
+</body>
+</html>
