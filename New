@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashutosh Kumar Pathak – Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    section h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ashutosh Kumar Pathak</h1>
+      <p>Email: ashutoshkumarpathak122@outlook.com | Phone: +91 8757710312</p>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Experienced IT Support and Operations Specialist with over 5 years of experience in technical support, system administration, and customer service.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>IT Service Management</li>
+        <li>Network Administration</li>
+        <li>Citrix, ServiceNow, Microsoft 365</li>
+        <li>Windows, Linux, Mac OS</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <form method="POST" action="/submit">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
